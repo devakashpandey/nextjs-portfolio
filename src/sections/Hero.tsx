@@ -53,7 +53,7 @@ const Hero = () => {
         >
           <Button
             text="My Resume"
-            link="https://drive.google.com/file/d/14PmEymDXJyaRvF5xhisMObiVcyv5DJqK/view"
+            link="https://drive.google.com/file/d/15QbIbXN3nhN7vfXLHBW3ZKWUL4KxOMH-/view?usp=drive_link"
           />
         </motion.div>
       </div>
