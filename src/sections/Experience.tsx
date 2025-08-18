@@ -16,14 +16,18 @@ const Experience = () => {
 
   const expereinces = [
     {
-      name: "Fictive Box",
+      name: "FictiveBox ",
       role: "Front-End Developer",
       url: "",
       start: "Feb 2025",
       end: "Present",
       shortDescription: [
-        "Designed and developed a reusable component library for future use, resulting in a 30 percent reduction in development time for new projects.",
-        "Additionally, I've represented the company in client meetings, communicating effectively on their behalf.",
+        "Built a holistic system for managing tendering, coach manufacturing, purchasing, and billing, ensuring an end-to-end streamlined workflow.",
+        "Integrated Formik with Yup for form handling and advanced validations.",
+
+        "Designed and developed a smooth UI for generating AI-driven marketing videos from prompts and images.",
+        "Created a custom video player with full playback controls for seamless user experience.",
+        "Optimized UI and workflow, contributing to a 10 percent increase in product sales.",
       ],
     },
     {
