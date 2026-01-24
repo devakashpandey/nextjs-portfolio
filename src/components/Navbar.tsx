@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { MdOutlineMenu } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
-import Logo from "./Logo";
+import Logo from "@/components/Logo";
 const Navbar = () => {
   const [navVisible, setNavVisible] = useState(true);
   const [responsiveNav, setResponsiveNav] = useState(false);
