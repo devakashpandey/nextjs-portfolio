@@ -8,13 +8,15 @@ const Experience = () => {
   useEffect(() => {
     const selectedAnimate = () => {
       const underline = document.querySelector<HTMLElement>(".underline");
-      underline!.style.top = `${selected * 2.8}rem`;
+      if (underline) {
+        underline.style.top = `${selected * 2.8}rem`;
+      }
     };
 
     selectedAnimate();
   }, [selected]);
 
-  const expereinces = [
+  const experiences = [
     {
       name: "Quichub Innovations",
       role: "Software Developer",
@@ -81,7 +83,7 @@ const Experience = () => {
         <div className="container">
           <ul className="exp-slider">
             <div className="underline"></div>
-            {expereinces.map((item, index) => (
+            {experiences.map((item, index) => (
               <li
                 key={index}
                 className={`exp-slider-item  ${index === selected && "exp-slider-item-selected"
@@ -96,20 +98,20 @@ const Experience = () => {
           <div className="exp-details-container">
             <div className="exp-details">
               <h3>
-                <span>{expereinces[selected].role} at </span>
+                <span>{experiences[selected].role} at </span>
                 <span className="position-company">
                   {" "}
-                  <Link href={expereinces[selected].url}>
-                    {expereinces[selected].name}
+                  <Link href={experiences[selected].url}>
+                    {experiences[selected].name}
                   </Link>
                 </span>
               </h3>
               <p className="exp-start-end-time">
-                {expereinces[selected].start} - {expereinces[selected].end}
+                {experiences[selected].start} - {experiences[selected].end}
               </p>
 
               <ul className="exp-detail-list">
-                {expereinces[selected].shortDescription.map(
+                {experiences[selected].shortDescription.map(
                   (descrip, index) => (
                     <motion.li
                       key={index}
