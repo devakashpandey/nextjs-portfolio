@@ -6,6 +6,7 @@ import {
   FiLinkedin,
   FiTwitter,
   FiYoutube,
+  FiTerminal,
 } from "react-icons/fi";
 import { motion } from "framer-motion";
 
@@ -37,6 +38,14 @@ export const SocialIcons = () => {
       icon: <FiInstagram />,
       link: "https://www.instagram.com/firstclasscode/",
     },
+    {
+      name: "Terminal",
+      icon: <FiTerminal />,
+      link: "#",
+      onClick: () => {
+        window.dispatchEvent(new Event("toggle-terminal"));
+      },
+    },
   ];
   return (
     <>
@@ -47,15 +56,25 @@ export const SocialIcons = () => {
         transition={{ duration: 0.3, ease: "easeInOut", delay: 1.85 }}
       >
         <ul>
-          {SocialLinks.map(({ name, icon, link }) => (
+          {SocialLinks.map(({ name, icon, link, onClick }) => (
             <li key={name} title={name} className="social-icons-item">
-              <Link
-                href={link}
-                className="social-icons-icon-link"
-                target="_blank"
-              >
-                {icon}
-              </Link>
+              {onClick ? (
+                <div
+                  className="social-icons-icon-link"
+                  onClick={onClick}
+                  style={{ cursor: "pointer" }}
+                >
+                  {icon}
+                </div>
+              ) : (
+                <Link
+                  href={link}
+                  className="social-icons-icon-link"
+                  target="_blank"
+                >
+                  {icon}
+                </Link>
+              )}
             </li>
           ))}
         </ul>

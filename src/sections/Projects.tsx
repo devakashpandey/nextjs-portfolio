@@ -3,6 +3,8 @@ import Link from "next/link";
 import React from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { motion } from "framer-motion";
+import Tilt from "@/components/Tilt";
+
 
 function Projects() {
   const projectsData = [
@@ -103,10 +105,12 @@ function Projects() {
                 }}
               >
                 <div className="project-image">
-                  <div className="project-image-overlay"></div>
-                  <div className="project-image-container">
-                    <Image src={image} fill alt={projectName} quality={100} />
-                  </div>
+                  <Tilt>
+                    <div className="project-image-overlay"></div>
+                    <div className="project-image-container">
+                      <Image src={image} fill alt={projectName} quality={100} />
+                    </div>
+                  </Tilt>
                 </div>
                 <div className="project-info">
                   <p className="project-info-overline">Featured Project</p>

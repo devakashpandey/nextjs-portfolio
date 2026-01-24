@@ -1,35 +1,38 @@
 import Button from "@/components/Button";
 import React from "react";
 import { motion } from "framer-motion";
+import Magnetic from "@/components/Magnetic";
+import ScatterText from "@/components/ScatterText";
+import TextReveal from "@/components/TextReveal";
 
 const Hero = () => {
   return (
     <>
       <div className="hero">
-        <motion.h1
+        <motion.div
+          className="status-pill"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <span className="pulsing-dot"></span>
+          Available for new opportunities
+        </motion.div>
+        <TextReveal
+          text="Hi everyone, my name is"
           className="hero-title"
-          initial={{ opacity: 0, y: 5 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.6 }}
-        >
-          Hi everyone, my name is
-        </motion.h1>
-        <motion.h2
-          className="hero-title-large"
-          initial={{ opacity: 0, y: 5 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.75 }}
-        >
-          Akash Pandey<span style={{ fontSize: "25px" }}>●</span>
-        </motion.h2>
-        <motion.h3
+          delay={0.6}
+        />
+        <div className="hero-title-large">
+          <TextReveal className="hero-name-container" delay={0.75}>
+            <ScatterText text="Akash Pandey." />
+          </TextReveal>
+        </div>
+        <TextReveal
+          text="I build things for the web."
           className="hero-title-large hero-title-sub"
-          initial={{ opacity: 0, y: 5 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, ease: "easeInOut", delay: 1.05 }}
-        >
-          I build things for the web.
-        </motion.h3>
+          delay={1.05}
+        />
 
         <motion.p
           className="hero-text"
@@ -37,11 +40,12 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut", delay: 1.2 }}
         >
-          A passionate Front-end Developer with 2 years of expertise in
-          developing user-friendly, adaptive and responsive websites with
-          optimized cross-browser compatibility and runtime performance.{" "}
+          A Software Developer with over 3 years of experience developing
+          responsive and user-focused web applications, with optimized
+          cross-browser compatibility and runtime performance. <br />
           <span style={{ color: "var(--light-slate)" }}>
-            &quot;I believe web design can be more diverse & inspiring.&quot;
+            &quot;I believe web development can be more diverse &
+            inspiring.&quot;
           </span>{" "}
         </motion.p>
 
@@ -51,10 +55,12 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut", delay: 1.35 }}
         >
-          <Button
-            text="My Resume"
-            link="https://drive.google.com/file/d/15QbIbXN3nhN7vfXLHBW3ZKWUL4KxOMH-/view?usp=drive_link"
-          />
+          <Magnetic>
+            <Button
+              text="My Resume"
+              link="https://drive.google.com/file/d/15QbIbXN3nhN7vfXLHBW3ZKWUL4KxOMH-/view?usp=drive_link"
+            />
+          </Magnetic>
         </motion.div>
       </div>
     </>

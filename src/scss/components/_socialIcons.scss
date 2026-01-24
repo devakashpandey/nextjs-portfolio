@@ -10,7 +10,8 @@
       font-size: var(--tlarge2);
       transition: 0.3s ease-in-out;
       margin-top: 5px;
-      & > a {
+      & > a,
+      & > .social-icons-icon-link {
         color: var(--lightest-slate);
         transition: 0.3s ease-in-out;
         outline: 2px dashed transparent;

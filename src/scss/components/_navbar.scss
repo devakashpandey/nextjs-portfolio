@@ -1,6 +1,21 @@
 nav {
-  transition: 0.3s all ease-in-out;
-  min-height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  min-height: 80px;
+  transition: transform 0.4s ease, background 0.3s ease;
+  will-change: transform;
+
+  &.show {
+    transform: translateY(0);
+  }
+
+  &.hide {
+    transform: translateY(-100%);
+  }
+
   .wrapper {
     padding: 0 3rem;
     width: 100%;
@@ -8,21 +23,27 @@ nav {
     justify-content: space-between;
     align-items: center;
     transition: all 0.3s ease;
+    background: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 10px 30px -10px var(--navy-shadow);
+
     .logo {
       a {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 2em 0rem;
+        margin: 1rem 0;
         height: 3.5rem;
         width: 3.5rem;
         fill: none;
         color: var(--theme-color);
         transition: all 0.3s ease;
         cursor: pointer;
+
         &:hover {
           fill: #64dad91a;
         }
+
         &:focus {
           outline-color: var(--theme-color);
           fill: #64dad91a;
@@ -37,13 +58,15 @@ nav {
       justify-content: center;
       align-items: center;
       transition: 0.3s all ease-in-out;
-      z-index: 15;
+      z-index: 1001;
+      cursor: pointer;
     }
 
     .nav-items {
       display: flex;
       align-items: center;
       gap: 2rem;
+
       .nav-item-ul {
         display: flex;
         gap: 1.5rem;
@@ -51,15 +74,18 @@ nav {
         counter-reset: nav-list;
         font-family: var(--fira-code);
         font-size: var(--tsm1);
+
         a {
           color: inherit;
           padding: 10px;
+
           &::before {
             counter-increment: nav-list;
             content: "0" counter(nav-list) ". ";
             color: var(--theme-color);
             transition: all 0.3s ease;
           }
+
           &:hover {
             color: var(--theme-color);
           }
@@ -68,53 +94,59 @@ nav {
 
       .nav-button {
         transition: all 0.25s ease-in-out;
+
         &:hover {
-          transform: translate(0.4rem);
+          transform: translateX(0.4rem);
         }
       }
     }
+
+    /* 📱 MOBILE MENU (FULL SCREEN OVERLAY) */
     @media (max-width: 768px) {
       padding: 0 1.5rem;
+
       .responsive-nav-toggle {
         display: flex;
       }
+
       .nav-items {
         position: fixed;
+        inset: 0; 
+        width: 100vw;
         height: 100vh;
-        right: 0;
-        width: 0%;
-        opacity: 0;
-        visibility: hidden;
-        top: 0;
-        padding: 50px 10px;
         background-color: var(--light-navy);
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: 0.3s ease-in-out;
-        z-index: 11;
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.35s ease, opacity 0.3s ease;
+        z-index: 1000;
+
         .nav-item-ul {
           flex-direction: column;
+          gap: 2rem;
+          font-size: var(--tsm2);
         }
       }
+
       .nav-responsive {
-        width: min(75vw, 350px);
-        visibility: visible;
+        transform: translateX(0);
         opacity: 1;
-        height: 100%;
+        visibility: visible;
       }
     }
 
-    .blur-nav {
-      height: 80px;
-      display: none;
-      position: fixed;
-      top: 0;
-      transition: 0.3s all ease-in-out;
-      z-index: 20;
-      background: rgb(10, 25, 47, 0.85);
-      box-shadow: 0px 10px 30px -10px var(--navy-shadow);
-      backdrop-filter: blur(10px);
+    &.blur-nav {
+      background: rgba(10, 25, 47, 0.9);
+      backdrop-filter: blur(12px);
     }
   }
+}
+
+body.nav-open {
+  overflow: hidden;
+  height: 100vh;
+  touch-action: none;
 }

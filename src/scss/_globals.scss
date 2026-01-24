@@ -7,13 +7,26 @@
 html,
 body {
   scroll-behavior: smooth;
-  overflow: none;
+  overflow-x: hidden;
 }
 
 body {
   background: var(--background-color);
   font-family: var(--raleway);
   position: relative;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 10000;
+  }
 }
 
 body::-webkit-scrollbar {
@@ -35,4 +48,30 @@ a {
   font-size: var(--tlarge1);
   font-weight: 400;
   margin-right: 5px;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--light-navy);
+  color: var(--theme-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 999;
+  border: 1px solid rgba(50, 230, 230, 0.3);
+  box-shadow: 0 10px 30px -10px var(--navy-shadow);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(50, 230, 188, 0.1);
+    transform: translateY(-5px);
+    border-color: var(--theme-color);
+  }
 }

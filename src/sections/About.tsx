@@ -27,38 +27,34 @@ const About = () => {
       <div className="about-grid">
         <div className="about-info">
           <p className="about-info-text">
+
+           
+
             Hello! I&apos;m{" "}
-            <span style={{ color: "var(--theme-color)" }}>Akash Pandey</span>, a
-            passionate Front-end Developer based in Delhi with over 2 years of
-            hands-on experience. I specialize in building responsive,
-            user-friendly web applications that deliver real-world impact.
+            <span style={{ color: "var(--theme-color)" }}>Akash Pandey</span>, A Software Developer experienced in developing responsive and user-focused web applications, ensuring reliable performance across modern browsers.
+Has experience leading teams and collaborating with clients. Leverages AI-assisted tools to enhance development efficiency while following clean coding and structured design practices.
           </p>
           <p className="about-info-text">
             My journey in web development began in{" "}
-            <span style={{ color: "var(--theme-color)" }}>2022</span>, during my
-            final year of BCA. Since then, I have continuously upskilled through
+            <span style={{ color: "var(--theme-color)" }}>2023</span>, after completing my BCA. Since then, I have continuously upskilled through
             self-learning and professional training from Unacademy.
           </p>
-          <p className="about-info-text">
-            I enjoy crafting clean and scalable UIs using technologies like:{" "}
-            <br />
-            React, Next js, TypeScript, & Tailwind CSS.
-          </p>
+       
           <p className="about-info-text">
             Here are a few technologies I&apos;ve been working with recently:
           </p>
           <ul className="about-info-list">
+          <li className="about-info-list-item">HTML</li>
+           <li className="about-info-list-item">CSS</li>
             <li className="about-info-list-item">JavaScript</li>
             <li className="about-info-list-item">React</li>
             <li className="about-info-list-item">Redux</li>
             <li className="about-info-list-item">Tailwind CSS</li>
-            <li className="about-info-list-item">MUI</li>
             <li className="about-info-list-item">SASS</li>
             <li className="about-info-list-item">Next.js</li>
-            <li className="about-info-list-item">Github</li>
             <li className="about-info-list-item">Typescript</li>
-            <li className="about-info-list-item">Framer Motion</li>
             <li className="about-info-list-item">React Three Fiber</li>
+            <li className="about-info-list-item">AI-Assisted Development</li>
           </ul>
         </div>
 

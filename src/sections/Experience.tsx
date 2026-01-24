@@ -16,11 +16,24 @@ const Experience = () => {
 
   const expereinces = [
     {
-      name: "FictiveBox ",
+      name: "Quichub Innovations",
+      role: "Software Developer",
+      url: "",
+      start: "December 2025",
+      end: "Present",
+      shortDescription: [
+        "Worked on a seller console built using Next.js, TypeScript, and Tailwind CSS, allowing users to log in and create their own online stores.",
+        "Implemented core features such as store creation flow, template and theme selection, product management, and settings including site URL configuration.",
+        "Developed the storefront (main website) using Qwik, focusing on responsive UI, smooth user experience, and performance across devices."
+      ],
+
+    },
+    {
+      name: "FictiveBox Digital ",
       role: "Front-End Developer",
       url: "",
       start: "Feb 2025",
-      end: "Present",
+      end: "December 2025",
       shortDescription: [
         "Built a holistic system for managing tendering, coach manufacturing, purchasing, and billing, ensuring an end-to-end streamlined workflow.",
         "Integrated Formik with Yup for form handling and advanced validations.",
@@ -32,9 +45,9 @@ const Experience = () => {
     },
     {
       name: "SD Campus",
-      role: "Front-End Developer",
+      role: "Front-End React Developer",
       url: "https://www.sdcampus.com/",
-      start: "Nov 2023",
+      start: "Oct 2023",
       end: "Feb 2025",
       shortDescription: [
         "I work on two projects “SD CAMPUS” a learning platform and a “SD STORE” an E-commerce book store website.",
@@ -43,18 +56,7 @@ const Experience = () => {
         "Optimized components for maximum performance across a vast array of web-capable devices and browsers.",
       ],
     },
-    {
-      name: "SleekSites",
-      role: "Front-End Developer",
-      url: "https://www.flexibench.io/",
-      start: "July 2023",
-      end: "Oct 2023",
-      shortDescription: [
-        "Developed and designed responsive web pages for “FlexiBench” and “Roadvison” projects ensuring a clean, user-friendly interface using Angular & React.js.",
-        "Implemented smooth, user-centric UI/UX design for both projects.",
-        "Additionally, I've represented the company in client meetings, communicating effectively on their behalf.",
-      ],
-    },
+
   ];
 
   return (
@@ -82,9 +84,8 @@ const Experience = () => {
             {expereinces.map((item, index) => (
               <li
                 key={index}
-                className={`exp-slider-item  ${
-                  index === selected && "exp-slider-item-selected"
-                }`}
+                className={`exp-slider-item  ${index === selected && "exp-slider-item-selected"
+                  }`}
                 onClick={() => setSelected(index)}
               >
                 <span>{item.name}</span>
@@ -110,9 +111,18 @@ const Experience = () => {
               <ul className="exp-detail-list">
                 {expereinces[selected].shortDescription.map(
                   (descrip, index) => (
-                    <li key={index} className="descrip-list-item">
+                    <motion.li
+                      key={index}
+                      className="descrip-list-item"
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{
+                        duration: 0.5,
+                        delay: index * 0.1,
+                      }}
+                    >
                       {descrip}
-                    </li>
+                    </motion.li>
                   )
                 )}
               </ul>

@@ -1,27 +1,76 @@
 .hero {
-  margin-top: 3rem;
+  margin-top: 10rem; // Increased from 12rem
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 1.2rem;
-  min-height: 55vh;
+  gap: 2.5rem; // Increased from 1.2rem
+  min-height: 60vh;
+
+  .status-pill {
+    background: rgba(50, 230, 188, 0.1);
+    color: var(--theme-color);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: var(--tsm);
+    font-family: var(--fira-code);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    border: 1px solid rgba(50, 230, 188, 0.2);
+    margin-bottom: 2rem; // Added more space below pill
+
+    .pulsing-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--theme-color);
+      border-radius: 50%;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: inherit;
+        border-radius: inherit;
+        animation: pulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+      }
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
   .hero-title {
     color: var(--theme-color);
     font-family: var(--fira-code);
     font-size: var(--tsm2);
-    font-weight: normal;
+    font-weight: 500;
   }
 
   .hero-title-large {
-    font-size: var(--tgiant);
+    font-size: clamp(55px, 9vw, 85px);
     color: var(--light-slate);
-    font-family: var(--raleway);
+    font-family: var(--outfit); // Switched to Outfit
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -2px; // Modern look
   }
 
   .hero-title-sub {
     color: var(--lightest-slate);
-    font-size: 4.2rem;
+    font-size: clamp(35px, 6vw, 55px);
+    margin-top: 0.5rem;
+    font-weight: 500;
+    font-family: var(--outfit); // Switched to Outfit
+    letter-spacing: -1px;
   }
   .hero-text {
     color: var(--slate);
@@ -59,6 +108,11 @@
       width: 100%;
     }
 
+    .hero-title-large {
+      font-size: clamp(35px, 12vw, 50px);
+      letter-spacing: -1px;
+    }
+
     .hero-title-sub {
       color: var(--lightest-slate);
       font-size: 2rem;
@@ -69,6 +123,10 @@
   @media (max-width: 350px) {
     .hero-text {
       width: 100%;
+    }
+
+    .hero-title-large {
+      font-size: clamp(30px, 11vw, 40px);
     }
 
     .hero-title-sub {
