@@ -8,6 +8,18 @@ import Tilt from "@/components/Tilt";
 
 function Projects() {
   const projectsData = [
+      {
+      image: "/product_price_tracker.png",
+      projectName: "Product Price Tracker",
+      projectLink: "https://product-price-drop-tracker.vercel.app/",
+      projectDescription:
+        "Full-stack product price tracker web app built with Next.js and Supabase, allowing users to track product prices and set custom target alerts. Live prices are fetched using Firecrawl, and a cron job to check prices periodically and send email notifications when prices drop.",
+      projectTech: ["NextJs", "Shadcn", "Supabase", "Firecrawl", "Cron-job"],
+      projectExternalLinks: {
+        github: "https://github.com/devakashpandey/Product-price-tracker",
+        externalLink: "",
+      },
+    },
     {
       image: "/movionix.png",
       projectName: "Movionix",
@@ -51,18 +63,7 @@ function Projects() {
         externalLink: "",
       },
     },
-    {
-      image: "/portfolio1.png",
-      projectName: "Portfolio",
-      projectLink: "https://iamakashpandey.netlify.app",
-      projectDescription:
-        "This portfolio is built using React JS and includes features like dark/light mode using the Context API and a fully responsive design that works seamlessly across all screen sizes.",
-      projectTech: ["React", "Context API", "AOS", "Material UI"],
-      projectExternalLinks: {
-        github: "https://github.com/devakashpandey/My_Portfolio",
-        externalLink: "",
-      },
-    },
+  
   ];
   return (
     <div className="projects" id="work">
