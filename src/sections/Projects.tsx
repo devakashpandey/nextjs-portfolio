@@ -11,7 +11,7 @@ function Projects() {
       {
       image: "/product_price_tracker.png",
       projectName: "Product Price Tracker",
-      projectLink: "https://product-price-drop-tracker.vercel.app/",
+      projectLink: "https://productpricedrop-tracker.vercel.app/",
       projectDescription:
         "Full-stack product price tracker web app built with Next.js and Supabase, allowing users to track product prices and set custom target alerts. Live prices are fetched using Firecrawl, and a cron job to check prices periodically and send email notifications when prices drop.",
       projectTech: ["NextJs", "Shadcn", "Supabase", "Firecrawl", "Cron-job"],
