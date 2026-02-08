@@ -47,6 +47,18 @@ const Hero = () => {
             &quot;I believe web development can be more diverse &
             inspiring.&quot;
           </span>{" "}
+          <br />
+          <br />
+          Building{" "}
+          <a
+            href="https://www.akkylabs.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="link"
+            style={{ color: "var(--theme-color)", fontWeight: "bold" }}
+          >
+            @AkkyLabs
+          </a>
         </motion.p>
 
         <motion.div

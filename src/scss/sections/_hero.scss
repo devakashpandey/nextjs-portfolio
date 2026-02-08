@@ -1,10 +1,10 @@
 .hero {
-  margin-top: 10rem; // Increased from 12rem
+  margin-top: 8rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 2.5rem; // Increased from 1.2rem
+  gap: 2rem;
   min-height: 60vh;
 
   .status-pill {
@@ -12,13 +12,13 @@
     color: var(--theme-color);
     padding: 0.6rem 1.2rem;
     border-radius: 50px;
-    font-size: var(--tsm);
+    font-size: 11px;
     font-family: var(--fira-code);
     display: flex;
     align-items: center;
     gap: 0.8rem;
     border: 1px solid rgba(50, 230, 188, 0.2);
-    margin-bottom: 2rem; // Added more space below pill
+    margin-bottom: 1.5rem;
 
     .pulsing-dot {
       width: 8px;
@@ -83,7 +83,7 @@
   }
 
   .hero-button {
-    margin-top: 2rem;
+    margin-top: 1.2rem;
     .btn {
       font-size: var(--tsm1);
       padding: 1rem 2rem;
