@@ -31,12 +31,12 @@ export const SocialIcons = () => {
     {
       name: "YouTube",
       icon: <FiYoutube />,
-      link: "https://www.youtube.com/@firstclasscode",
+      link: "https://www.youtube.com/@akkylabs",
     },
     {
       name: "Instagram",
       icon: <FiInstagram />,
-      link: "https://www.instagram.com/firstclasscode/",
+      link: "https://www.instagram.com/akkylabs/",
     },
     {
       name: "Terminal",

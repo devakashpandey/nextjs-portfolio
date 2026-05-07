@@ -22,16 +22,18 @@ const Hero = () => {
           text="Hi everyone, my name is"
           className="hero-title"
           delay={0.6}
+
         />
         <div className="hero-title-large">
-          <TextReveal className="hero-name-container" delay={0.75}>
+          <TextReveal className="hero-name-container" delay={0.75} >
             <ScatterText text="Akash Pandey." />
           </TextReveal>
         </div>
         <TextReveal
-          text="I build things for the web."
+          text="I build scalable digital products."
           className="hero-title-large hero-title-sub"
           delay={1.05}
+
         />
 
         <motion.p
@@ -40,12 +42,9 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut", delay: 1.2 }}
         >
-          A Software Developer with over 3 years of experience developing
-          responsive and user-focused web applications, with optimized
-          cross-browser compatibility and runtime performance. <br />
+          A Full Stack Software Engineer passionate about building scalable, high-performance web applications and seamless digital experiences with modern technologies and clean architecture. <br />
           <span style={{ color: "var(--light-slate)" }}>
-            &quot;I believe web development can be more diverse &
-            inspiring.&quot;
+            &quot;Turning ideas into scalable products through clean code and thoughtful design.&quot;
           </span>{" "}
           <br />
           <br />
@@ -55,7 +54,7 @@ const Hero = () => {
             target="_blank"
             rel="noreferrer"
             className="link"
-            style={{ color: "var(--theme-color)", fontWeight: "bold" }}
+            style={{ color: "var(--theme-color)", fontWeight: "semibold" }}
           >
             @AkkyLabs
           </a>

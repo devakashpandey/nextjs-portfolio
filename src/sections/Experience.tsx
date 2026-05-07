@@ -19,43 +19,48 @@ const Experience = () => {
   const experiences = [
     {
       name: "Quichub Innovations",
-      role: "Software Developer",
+      role: "Software Engineer",
       url: "",
       start: "December 2025",
       end: "Present",
       shortDescription: [
-        "Worked on a seller console built using Next.js, TypeScript, and Tailwind CSS, allowing users to log in and create their own online stores.",
-        "Implemented core features such as store creation flow, template and theme selection, product management, and settings including site URL configuration.",
-        "Developed the storefront (main website) using Qwik, focusing on responsive UI, smooth user experience, and performance across devices."
+        "Contributed to the development of a scalable multi-tenant seller console using Next.js, TypeScript, and Tailwind CSS, enabling users to seamlessly create and manage their own online stores.",
+        "Built and optimized essential e-commerce functionalities including authentication, store onboarding flow, theme and template customization, product management, and advanced store settings such as custom site URL configuration.",
+        "Developed a high-performance storefront experience using Qwik with a strong focus on responsive design, fast page rendering, smooth user interactions, and cross-device compatibility.",
+        "Engineered a Shopify-inspired website builder and storefront system featuring customizable themes, dynamic layouts, reusable components, and flexible store management capabilities tailored for modern e-commerce businesses."
       ],
 
     },
     {
       name: "FictiveBox Digital ",
-      role: "Front-End Developer",
+      role: "Software Developer",
       url: "",
       start: "Feb 2025",
       end: "December 2025",
       shortDescription: [
-        "Built a holistic system for managing tendering, coach manufacturing, purchasing, and billing, ensuring an end-to-end streamlined workflow.",
-        "Integrated Formik with Yup for form handling and advanced validations.",
+        "Developed and maintained an end-to-end enterprise management platform for tendering, coach manufacturing, procurement, and billing operations, streamlining complex business workflows and improving operational efficiency.",
 
-        "Designed and developed a smooth UI for generating AI-driven marketing videos from prompts and images.",
-        "Created a custom video player with full playback controls for seamless user experience.",
-        "Optimized UI and workflow, contributing to a 10 percent increase in product sales.",
+        "Developed scalable and highly validated dynamic forms using React, Formik, and Yup, ensuring robust data handling, seamless user interactions, and reduced validation errors across the application.",
+
+        "Designed and implemented an AI-powered video generation interface that enabled users to create marketing videos from text prompts and images, improving user engagement and contributing to a 10% increase in product sales through an optimized and intuitive user experience.",
+
+        "Built a custom media player with advanced playback functionality and optimized frontend workflows, enhancing overall user engagement and contributing to measurable growth in product conversions and sales.",
       ],
     },
     {
       name: "SD Campus",
-      role: "Front-End React Developer",
+      role: "Front-End Developer",
       url: "https://www.sdcampus.com/",
-      start: "Oct 2023",
+      start: "Feb 2024",
       end: "Feb 2025",
       shortDescription: [
-        "I work on two projects “SD CAMPUS” a learning platform and a “SD STORE” an E-commerce book store website.",
-        "Designed and developed a reusable component library for future use, resulting in a 20 percent reduction in development time for new projects.",
-        "Collaborated with teams to ensure both projects met user requirements and business goals, delivering high-quality web solutions that drove engagement and sales.",
-        "Optimized components for maximum performance across a vast array of web-capable devices and browsers.",
+        "Contributed to the development of “SD CAMPUS”, an online learning platform, and “SD STORE”, an e-commerce bookstore, focusing on scalable architecture and seamless user experience.",
+
+        "Designed and developed a reusable component library to standardize UI development, reducing development time for new features and projects by 20%.",
+
+        "Collaborated closely with cross-functional teams to deliver user-centric solutions aligned with business objectives, improving platform engagement and overall user satisfaction.",
+
+        "Optimized frontend components and application performance to ensure responsive, cross-browser compatible, and consistent experiences across multiple devices.",
       ],
     },
 
